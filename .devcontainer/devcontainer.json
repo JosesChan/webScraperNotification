@@ -1,16 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/anaconda
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-	"name": "Anaconda (Python 3)",
-	"build": { 
-		"context": "..",
-		"dockerfile": "Dockerfile"
-	},
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/pipenv:2": {},
-		"ghcr.io/devcontainers-contrib/features/pipx-package:1": {},
-		"ghcr.io/akhildevelops/devcontainer-features/pip:0": {}
-	}
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -19,7 +12,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "python --version",
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
