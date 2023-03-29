@@ -10,10 +10,11 @@ targetBeltSize = ['M','L']
 
 productPages = getListURL()
 
-currentStock = getAvailableStock(targetBeltSize, productPages)
+if(productPages!=None):
+    currentStock = getAvailableStock(targetBeltSize, productPages)
 
-outputMessage(currentStock)
+    outputMessage(currentStock)
 
-exportCSV(currentStock)
-
-
+    exportCSV(currentStock)
+else:
+    print("Pages cant be retrieved")
