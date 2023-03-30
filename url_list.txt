@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 https://tetsugakure.market/collections/lever-belts/products/villain-lever-belt
 https://tetsugakure.market/collections/apparel/products/matcha-pump-cover
 https://tetsugakure.market/collections/apparel/products/divine-pump-cover
@@ -9,7 +7,6 @@ https://tetsugakure.market/collections/apparel/products/matcha-pump-cover
 https://tetsugakure.market/collections/apparel/products/nichirin-mesh-shorts
 https://tetsugakure.market/collections/apparel/products/hanafuda-mesh-shorts
 https://tetsugakure.market/collections/apparel/products/divine-mesh-shorts
->>>>>>> Stashed changes
 https://tetsugakure.market/collections/lever-belts/products/scouts-lever-belt
 https://tetsugakure.market/collections/lever-belts/products/villain-lever-belt
 https://tetsugakure.market/collections/lever-belts/products/curse-lever-belt

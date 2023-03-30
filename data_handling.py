@@ -64,12 +64,6 @@ def getAvailableStock(targetBeltSize, websiteList):
     # Dataframe that stores all relevant products that will be outputted to user
     notificationOutDf = pandas.DataFrame()
 
-<<<<<<< Updated upstream
-    # Append all targeted products into dataframe
-    for i in websiteList:
-        notificationOutDf = pandas.concat([notificationOutDf[:], getInventory(i, targetBeltSize)])
-    
-=======
 
     # Append all targeted products into dataframe
     for i in websiteList:
@@ -80,7 +74,6 @@ def getAvailableStock(targetBeltSize, websiteList):
             continue
 
 
->>>>>>> Stashed changes
     # Reset index for the new dataframe
     notificationOutDf.reset_index()
 
