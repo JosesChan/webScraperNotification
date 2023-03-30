@@ -1,9 +1,0 @@
-{
-	"folders": [
-		{
-			"uri": "vscode-remote://dev-container+7b22766f6c756d654e616d65223a22707974686f6e222c22666f6c646572223a22707974686f6e227d/workspaces/python"
-		}
-	],
-	"remoteAuthority": "dev-container+7b22766f6c756d654e616d65223a22707974686f6e222c22666f6c646572223a22707974686f6e227d",
-	"settings": {}
-}
