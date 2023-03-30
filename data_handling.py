@@ -17,8 +17,15 @@ def getInventory(URL, targetBeltSize):
     # Beautiful Soup, scrape json object about product information
     page = requests.get(URL)
     soup = BeautifulSoup(page.content, "html.parser")
+
+    # If it detects a 404 page template, return an empty Df since there is nothing to gain from this page
+    if(soup.find("body", {"class":"template-404"})!=None):
+        return(responseDf)
+
     productName = json.loads(soup.find("script", type="application/ld+json").string)["name"]
     productData = json.loads(soup.main.find("script", type="application/ld+json").string)["offers"]
+
+    print(productName)
 
     # dataframe with most information about products
     productDf= pandas.DataFrame(productData)
@@ -46,6 +53,8 @@ def getInventory(URL, targetBeltSize):
     print(productName,"Notification List")
     print(responseDf, '\n')
 
+
+
     return(responseDf)
 
 # Get the inventory of the products (given by a list of web links)
@@ -55,10 +64,23 @@ def getAvailableStock(targetBeltSize, websiteList):
     # Dataframe that stores all relevant products that will be outputted to user
     notificationOutDf = pandas.DataFrame()
 
+<<<<<<< Updated upstream
     # Append all targeted products into dataframe
     for i in websiteList:
         notificationOutDf = pandas.concat([notificationOutDf[:], getInventory(i, targetBeltSize)])
     
+=======
+
+    # Append all targeted products into dataframe
+    for i in websiteList:
+        try:
+            notificationOutDf = pandas.concat([notificationOutDf[:], getInventory(i, targetBeltSize)])
+        except requests.exceptions.HTTPError as err:
+            print(err)
+            continue
+
+
+>>>>>>> Stashed changes
     # Reset index for the new dataframe
     notificationOutDf.reset_index()
 
@@ -72,7 +94,7 @@ def getAvailableStock(targetBeltSize, websiteList):
 # Output dataframe with related information in a readable format for a user
 def outputMessage(inputDf):
     for index, i in inputDf.iterrows():
-        print(i["name"],"\n", "Size:", i["size"], date.today(),"\n", "Link to belt:","\n", i["url"])
+        print(i["name"],"\n", "Size:", i["size"], date.today(),"\n", "Link to item:","\n", i["url"],"\n")
 
 
     # REDUNDANT CODE: regex get all data inside "meta" js variable
