@@ -64,15 +64,13 @@ def getAvailableStock(targetBeltSize, websiteList):
     # Dataframe that stores all relevant products that will be outputted to user
     notificationOutDf = pandas.DataFrame()
 
-
-    # Append all targeted products into dataframe
-    for i in websiteList:
-        try:
+    try:
+        # Append all targeted products into dataframe
+        for i in websiteList:
             notificationOutDf = pandas.concat([notificationOutDf[:], getInventory(i, targetBeltSize)])
-        except requests.exceptions.HTTPError as err:
-            print(err)
-            continue
-
+    
+    except:
+        print("Pages may not be formatted correctly for this web scraper")
 
     # Reset index for the new dataframe
     notificationOutDf.reset_index()
@@ -95,3 +93,6 @@ def outputMessage(inputDf):
     # shopifyProductData = allScripts[36]
     #data = re.findall(r"({.*?});", shopifyProductData.string)
     #shopifyProductData = [i for i in data if i != "{}"]
+
+def checkErrorPage():
+    
