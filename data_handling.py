@@ -93,6 +93,3 @@ def outputMessage(inputDf):
     # shopifyProductData = allScripts[36]
     #data = re.findall(r"({.*?});", shopifyProductData.string)
     #shopifyProductData = [i for i in data if i != "{}"]
-
-def checkErrorPage():
-    

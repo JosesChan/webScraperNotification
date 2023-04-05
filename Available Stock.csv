@@ -1,4 +1,4 @@
 ,@type,sku,availability,price,priceCurrency,priceValidUntil,url,size,name
-3,Offer,MS2204,http://schema.org/InStock,69.0,USD,2023-04-09,https://tetsugakure.market/products/nichirin-mesh-shorts?variant=42529671479457,M,NICHIRIN Mesh Shorts
-3,Offer,MS2104,http://schema.org/InStock,69.0,USD,2023-04-09,https://tetsugakure.market/products/hanafuda-mesh-shorts?variant=42529670824097,M,HANAFUDA Mesh Shorts
-4,Offer,MS2105,http://schema.org/InStock,69.0,USD,2023-04-09,https://tetsugakure.market/products/hanafuda-mesh-shorts?variant=42529670856865,L,HANAFUDA Mesh Shorts
+3,Offer,MS2204,http://schema.org/InStock,69.0,USD,2023-04-15,https://tetsugakure.market/products/nichirin-mesh-shorts?variant=42529671479457,M,NICHIRIN Mesh Shorts
+3,Offer,MS2104,http://schema.org/InStock,69.0,USD,2023-04-15,https://tetsugakure.market/products/hanafuda-mesh-shorts?variant=42529670824097,M,HANAFUDA Mesh Shorts
+4,Offer,MS2105,http://schema.org/InStock,69.0,USD,2023-04-15,https://tetsugakure.market/products/hanafuda-mesh-shorts?variant=42529670856865,L,HANAFUDA Mesh Shorts

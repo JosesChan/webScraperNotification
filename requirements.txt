@@ -2,3 +2,5 @@ requests
 bs4
 pandas
 numpy
+apscheduler
+fbchat
