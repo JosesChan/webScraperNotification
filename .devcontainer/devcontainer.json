@@ -3,7 +3,9 @@
 {
 	"name": "Python 3",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	
+	"runArgs": [
+        "--env-file", "${localWorkspaceFolder}/.devcontainer/fb_chat.env"
+    ], 
     "build": {
         // Path is relataive to the devcontainer.json file.
         "dockerfile": "Dockerfile",

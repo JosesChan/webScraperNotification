@@ -1,5 +1,21 @@
 import pandas
 import re
+import os
+from fbchat import Client
+from fbchat.models import *
+
+
+# try:
+
+#     client = Client('<email>', '<password>')
+
+# except:
+#     print("Error getting FB details, please edit to ensure they're correct")
+
+
+
+print(os.environ.get('FB_USER'))
+
 
 # Get lists of urls from url_list.txt
 def getListURL():
