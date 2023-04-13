@@ -1,20 +1,23 @@
 import pandas
 import re
 import os
-from fbchat import Client
-from fbchat.models import *
-
-
-# try:
-
-#     client = Client('<email>', '<password>')
-
-# except:
-#     print("Error getting FB details, please edit to ensure they're correct")
+import smtplib
 
 
 
-print(os.environ.get('FB_USER'))
+sender = "Private Person <from@example.com>"
+receiver = "A Test User <to@example.com>"
+
+message = f"""\
+Subject: Hi Mailtrap
+To: {receiver}
+From: {sender}
+
+This is a test e-mail message."""
+
+with smtplib.SMTP("sandbox.smtp.mailtrap.io", 2525) as server:
+    server.login(os.environ.get('MAIL_USER'), os.environ.get('MAIL_PASS'))
+    server.sendmail(sender, receiver, message)
 
 
 # Get lists of urls from url_list.txt
